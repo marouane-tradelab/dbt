@@ -156,7 +156,7 @@
 
   {%- set target_database = config.get('target_database') -%}
   {%- set target_schema = config.get('target_schema') -%}
-  {%- set target_table = config.get('target_table') -%}
+  {%- set target_table = model.get('alias', model.get('name')) -%}
 {#
   -- {%- set source_database = config.get('source_database') -%}
   -- {%- set source_schema = config.get('source_schema') -%}
